@@ -8,7 +8,14 @@ import (
 )
 
 func main() {
-	w
+	content, err := ioutil.ReadFile("input.txt")
+	if err != nil {
+		fmt.Printf("unable to read da input.txt %s", err)
+		os.Exit(1)
+	}
+
+	ids := strings.Split(string(content), "\n")
+
 	part1(ids)
 	part2(ids)
 }
@@ -18,7 +25,6 @@ func part1(ids []string) {
 	threeCount := 0
 
 	for _, s := range ids {
-		fmt.Println(s)
 		s = strings.ReplaceAll(s, " ", "")
 		counts := map[string]int{}
 		for _, r := range s {
