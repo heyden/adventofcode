@@ -15,10 +15,8 @@ func main() {
 
 	// transform input to expected type
 
-	fmt.Println("Executing part1")
 	part1()
 
-	fmt.Println("Executing part2")
 	part2()
 }
 
