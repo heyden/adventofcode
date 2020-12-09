@@ -65,7 +65,7 @@ func part2(data [][]int) int {
 	divisions := []int{}
 
 	for _, row := range data {
-
+		fmt.Println(row)
 	}
 
 	sum := 0

@@ -16,11 +16,11 @@ func main() {
 	}
 
 	// transform input to expected type
-	content := strings.Split(string(input), "\n")
+	data := strings.Split(string(input), "\n")
 
-	result := part1(content)
+	result := part1(data)
 	fmt.Printf("Part 1 = %v\n", result)
-	result = part2(content)
+	result = part2(data)
 	fmt.Printf("Part 2 = %v\n", result)
 }
 
