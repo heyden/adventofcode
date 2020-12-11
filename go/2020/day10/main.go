@@ -39,8 +39,6 @@ func part1(n []int) int {
 	a = append(a, 0)
 	sort.Ints(a)
 
-	fmt.Printf("Part 1 slice: %v", a)
-
 	d := map[int]int{}
 
 	for i, j := range a {
@@ -69,8 +67,6 @@ func part2(n []int) int {
 	a = append(a, highest)
 	sort.Ints(a)
 
-	fmt.Printf("Part 2 slice: %v", a)
-
 	counts := []int{}
 
 	for i, v := range a {
@@ -86,9 +82,6 @@ func part2(n []int) int {
 		}
 		counts = append(counts, p)
 	}
-
-	fmt.Printf("%v %v\n", len(a), a)
-	fmt.Printf("%v %v\n", len(counts), counts)
 
 	values := []int{}
 	i := 0
@@ -114,7 +107,6 @@ func part2(n []int) int {
 	}
 
 	p := counts[0]
-	fmt.Println(values)
 	result := sum(values[len(values)-p-1 : len(values)-1])
 	return result
 }
