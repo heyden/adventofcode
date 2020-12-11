@@ -84,6 +84,7 @@ func part2(n []int) int {
 	}
 
 	values := []int{}
+
 	i := 0
 	for e := len(counts) - 1; e >= 0; e-- {
 		v := counts[e]
@@ -106,9 +107,7 @@ func part2(n []int) int {
 		i++
 	}
 
-	p := counts[0]
-	result := sum(values[len(values)-p-1 : len(values)-1])
-	return result
+	return values[len(values)-1]
 }
 
 func sum(a []int) int {
