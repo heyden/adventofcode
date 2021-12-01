@@ -44,17 +44,15 @@ func part1(depths []int) int {
 
 func part2(depths []int) int {
 	increased := 0
-	psum := 0
-	for i, _ := range depths {
+	for i := 1; i < len(depths); i++ {
 		if i+3 > len(depths) {
 			break
 		}
-		sum := depths[i] + depths[i+1] + depths[i+2]
-		if i != 0 && sum > psum {
+		sump := depths[i-1] + depths[i-1+1] + depths[i-1+2]
+		sumc := depths[i] + depths[i+1] + depths[i+2]
+		if i != 0 && sumc > sump {
 			increased++
 		}
-		psum = sum
 	}
-
 	return increased
 }
