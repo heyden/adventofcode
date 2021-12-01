@@ -16,7 +16,7 @@ func main() {
 	// transform input to expected type
 
 	result := part1()
-	fmt.Printf("Part 1 = %v", result)
+	fmt.Printf("Part 1 = %v\n", result)
 
 	part2()
 }
