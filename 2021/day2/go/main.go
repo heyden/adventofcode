@@ -65,5 +65,5 @@ func part2(data []string) int {
 		}
 	}
 
-	return int(math.Abs(float64(x * y)))
+	return int(x * y)
 }
