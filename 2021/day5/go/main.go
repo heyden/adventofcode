@@ -100,10 +100,6 @@ func part1(data []string) int {
 	return overlaps
 }
 
-func step() {
-
-}
-
 func part2(data []string) int {
 	lines := []line{}
 
@@ -136,13 +132,44 @@ func part2(data []string) int {
 		lines = append(lines, line)
 	}
 
-	values := make(map[string]string)
+	values := make(map[string]int)
 	overlaps := 0
 
 	for _, l := range lines {
-		x := 1
-		y := 1
+		xs := step(l.x1, l.x2)
+		ys := step(l.y1, l.y2)
+
+		done := false
+		for i := 0; !done; i++ {
+			x := l.x1 + i*xs
+			y := l.y1 + i*ys
+
+			v, ok := values[fmt.Sprintf("%v,%v", x, y)]
+
+			if !ok {
+				values[fmt.Sprintf("%v,%v", x, y)] = 1
+			} else {
+				if v == 1 {
+					overlaps++
+				}
+				values[fmt.Sprintf("%v,%v", x, y)] = v + 1
+			}
+
+			if x == l.x2 && y == l.y2 {
+				done = true
+			}
+		}
 	}
 
 	return overlaps
+}
+
+func step(v1, v2 int) int {
+	if v2-v1 < 0 {
+		return -1
+	} else if v2-v1 > 0 {
+		return 1
+	} else {
+		return 0
+	}
 }
