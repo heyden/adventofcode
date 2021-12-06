@@ -23,8 +23,8 @@ func main() {
 	result := part1(content)
 	fmt.Printf("Part 1 = %v\n", result)
 
-	part2()
-	//fmt.Printf("Part 2 = %v\n", result)
+	result = part2(content)
+	fmt.Printf("Part 2 = %v\n", result)
 }
 
 type line struct {
