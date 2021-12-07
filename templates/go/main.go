@@ -18,7 +18,7 @@ func main() {
 	result := part1()
 	fmt.Printf("Part 1 = %v\n", result)
 
-	part2()
+	//result = part2()
 	//fmt.Printf("Part 2 = %v\n", result)
 }
 
