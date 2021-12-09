@@ -95,7 +95,6 @@ func buildPatternKnowlege(signals []string) map[int]string {
 
 	for _, sig := range signals {
 		sig = alpha(sig)
-		//fmt.Printf("%v %v = %v\n", patterns[8], sig, diff(patterns[8], sig))
 		if len(patterns[8])-len(sig) == 1 {
 			// 0, 6, 9
 			if len(contains(sig, patterns[4])) == 4 {
