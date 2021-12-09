@@ -131,29 +131,3 @@ func contains(s1 string, s2 string) []string {
 	}
 	return contains
 }
-
-func diff(s1, s2 string) []string {
-	unique := make(map[string]int)
-
-	for _, v := range strings.Split(s1, "") {
-		unique[v] = 1
-	}
-
-	for _, v := range strings.Split(s2, "") {
-		if _, ok := unique[v]; ok {
-			delete(unique, v)
-		} else {
-			unique[v] = 1
-		}
-	}
-
-	chars := make([]string, len(unique))
-
-	i := 0
-	for c := range unique {
-		chars[i] = c
-		i++
-	}
-
-	return chars
-}
