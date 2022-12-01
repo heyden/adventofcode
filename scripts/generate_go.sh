@@ -7,8 +7,8 @@ if [ -z "$loc" ]; then
     exit 1
 fi
 
-mkdir -p $PWD/$loc
+mkdir -p $PWD/$loc/go
 
-cp $PWD/templates/go/main.go $PWD/$loc
-cp $PWD/templates/go/main_test.go $PWD/$loc
+cp $PWD/templates/go/main.go $PWD/$loc/go
+cp $PWD/templates/go/main_test.go $PWD/$loc/go
 cp $PWD/templates/go/input.txt $PWD/$loc
