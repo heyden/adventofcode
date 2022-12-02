@@ -11,7 +11,7 @@ async function part2(input) {
 }
 
 async function main() {
-  const data = fs.readFileSync("input.txt", { encoding: "utf8" });
+  const data = fs.readFileSync("../input.txt", { encoding: "utf8" });
   // @TODO - transform
 
   const result1 = await part1(data);

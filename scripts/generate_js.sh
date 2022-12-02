@@ -7,7 +7,7 @@ if [ -z "$loc" ]; then
     exit 1
 fi
 
-rm -r $PWD/$loc
+rm -rf $PWD/$loc
 mkdir -p $PWD/$loc/js
 
 cp $PWD/templates/js/main.js $PWD/$loc/js

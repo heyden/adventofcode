@@ -3,25 +3,10 @@
 const assert = require("assert");
 const { part1, part2 } = require("./main");
 
-const input = `
-1000
-2000
-3000
-
-4000
-
-5000
-6000
-
-7000
-8000
-9000
-
-10000
-`;
+const input = ["A Y", "B X", "C Z"];
 
 async function test_part1() {
-  const expected = 24000;
+  const expected = 15;
   const actual = await part1(input);
   assert.equal(
     actual,
@@ -31,7 +16,7 @@ async function test_part1() {
 }
 
 async function test_part2() {
-  const expected = 45000;
+  const expected = 12;
   const actual = await part2(input);
   assert.equal(
     actual,
