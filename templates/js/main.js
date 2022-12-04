@@ -3,11 +3,13 @@
 const fs = require("fs");
 
 async function part1(input) {
-  return 0;
+  let result = 0;
+  return result;
 }
 
 async function part2(input) {
-  return 0;
+  let result = 0;
+  return result;
 }
 
 async function main() {
