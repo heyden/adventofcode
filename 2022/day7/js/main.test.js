@@ -1,0 +1,56 @@
+"use strict";
+
+const assert = require("assert");
+const { part1, part2 } = require("./main");
+
+const input = `$ cd /
+$ ls
+dir a
+14848514 b.txt
+8504156 c.dat
+dir d
+$ cd a
+$ ls
+dir e
+29116 f
+2557 g
+62596 h.lst
+$ cd e
+$ ls
+584 i
+$ cd ..
+$ cd ..
+$ cd d
+$ ls
+4060174 j
+8033020 d.log
+5626152 d.ext
+7214296 k`;
+
+async function test_part1(input) {
+  const expected = 95437;
+
+  const actual = await part1(input);
+  assert.equal(
+    actual,
+    expected,
+    `actual: [${actual}] != expected [${expected}]`
+  );
+}
+
+async function test_part2(input) {
+  const expected = 24933642;
+  const actual = await part2(input);
+  assert.equal(
+    actual,
+    expected,
+    `actual: [${actual}] != expected [${expected}]`
+  );
+}
+
+async function test() {
+  await test_part1(input);
+  await test_part2(input);
+}
+
+test();
