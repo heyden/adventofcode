@@ -3,17 +3,10 @@
 const assert = require("assert");
 const { part1, part2 } = require("./main");
 
-const input = [
-  "2-4,6-8",
-  "2-3,4-5",
-  "5-7,7-9",
-  "2-8,3-7",
-  "6-6,4-6",
-  "2-6,4-8",
-];
+const input = ["30373", "25512", "65332", "33549", "35390"];
 
-async function test_part1() {
-  const expected = 2;
+async function test_part1(input) {
+  const expected = 21;
   const actual = await part1(input);
   assert.equal(
     actual,
@@ -22,8 +15,8 @@ async function test_part1() {
   );
 }
 
-async function test_part2() {
-  const expected = 4;
+async function test_part2(input) {
+  const expected = 8;
   const actual = await part2(input);
   assert.equal(
     actual,
@@ -33,8 +26,9 @@ async function test_part2() {
 }
 
 async function test() {
-  await test_part1(input);
-  await test_part2(input);
+  const data = input.map((r) => r.split(""));
+  await test_part1(data);
+  await test_part2(data);
 }
 
 test();

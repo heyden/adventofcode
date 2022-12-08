@@ -13,12 +13,12 @@ async function part2(input) {
 }
 
 async function main() {
-  const data = fs.readFileSync("../input.txt", { encoding: "utf8" });
+  const input = fs.readFileSync("../input.txt", { encoding: "utf8" });
   // @TODO - transform
 
-  const result1 = await part1(data);
+  const result1 = await part1(input);
   console.log(`Part 1 = ${result1}`);
-  const result2 = await part2(data);
+  const result2 = await part2(input);
   console.log(`Part 2 = ${result2}`);
 }
 
